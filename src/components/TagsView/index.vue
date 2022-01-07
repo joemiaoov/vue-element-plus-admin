@@ -39,7 +39,7 @@
 
 <script lang="ts">
 import ScrollPane from './ScrollPane.vue'
-import path from 'path'
+import path from 'path-browserify'
 import { defineComponent, ref, unref, computed, watch, onMounted, nextTick } from 'vue'
 import { tagsViewStore } from '_@/store/modules/tagsView'
 import { permissionStore } from '_@/store/modules/permission'

@@ -34,7 +34,7 @@
 <script lang="ts">
 import { defineComponent, PropType, ref } from 'vue'
 import type { RouteRecordRaw } from 'vue-router'
-import path from 'path'
+import path from 'path-browserify'
 import { isExternal } from '@/utils/validate'
 import Item from './Item.vue'
 export default defineComponent({

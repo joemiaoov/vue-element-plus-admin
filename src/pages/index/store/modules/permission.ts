@@ -5,7 +5,7 @@ import { VuexModule, getModule, Module, Mutation, Action } from 'vuex-module-dec
 import { AppRouteRecordRaw } from '_@/router/types'
 import wsCache from '@/cache'
 import { isExternal } from '@/utils/validate'
-import path from 'path'
+import path from 'path-browserify'
 import { getParentLayout } from '_@/router/utils'
 
 import { appStore } from '_@/store/modules/app'
@@ -47,7 +47,7 @@ class Permission extends VuexModule implements PermissionState {
 
   @Action
   public GenerateRoutes(): Promise<unknown> {
-    return new Promise(resolve => {
+    return new Promise<void>(resolve => {
       // 路由权限控制
       let routerMap: AppRouteRecordRaw[] = []
       if (wsCache.get(appStore.userInfo).roleName === 'admin') {

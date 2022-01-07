@@ -114,7 +114,7 @@ export default defineComponent({
 
     const getBindValue = computed((): any => {
       const bindValue = { ...attrs, ...props }
-      delete bindValue.columns
+      // TODO delete bindValue.columns
       return bindValue
     })
 

@@ -1,5 +1,6 @@
 module.exports = {
   root: true,
+
   // parser: 'vue-eslint-parser',
   // parserOptions: {
   //   parser: '@typescript-eslint/parser',
@@ -40,11 +41,13 @@ module.exports = {
       {
         singleline: 10,
         multiline: {
-          max: 1,
-          allowFirstLine: false
+          max: 1
         }
       }
     ],
+    'vue/multi-word-component-names': ['error', {
+      'ignores': []
+    }],
     'vue/singleline-html-element-content-newline': 'off',
     'vue/multiline-html-element-content-newline': 'off',
     'vue/name-property-casing': [
@@ -360,5 +363,9 @@ module.exports = {
     ],
     'vue/no-use-v-if-with-v-for': 'off',
     'vue/no-v-model-argument': 'off'
+  },
+
+  parserOptions: {
+    parser: '@typescript-eslint/parser'
   }
 }

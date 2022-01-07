@@ -37,7 +37,7 @@
 </template>
 
 <script lang="ts">
-import path from 'path'
+import path from 'path-browserify'
 import { defineComponent, PropType, ref, reactive, nextTick, unref } from 'vue'
 import { setRoleApi, getRoleDetApi } from '../api'
 import { asyncRouterMap } from '_@/router'
